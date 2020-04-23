@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{1B8103F7-F793-47B0-9FBE-44EC66BC319D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Antario</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Baimless.xyz</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>.\output</IntDir>
+    <ExecutablePath>$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);$(ExecutablePath);$(DXSDK_DIR)Utilities\bin\x86</ExecutablePath>
+    <IncludePath>C:\Users\Yume\Documents\baimless-source\Baimless.club\nlohmann;C:\Users\Yume\Documents\baimless-source\Baimless.club;C:\Users\Intel\Documents\baimless-source\Baimless.club\nlohmann;C:\Users\Intel\Documents\baimless-source\Baimless.club;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
+    <TargetName>hvh</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);$(ExecutablePath);$(DXSDK_DIR)Utilities\bin\x86</ExecutablePath>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;C:\Users\Yume\Documents\BAIM\baimpaste\Baimless.club\nlohmann;C:\Users\Yume\Documents\BAIM\baimpaste\Baimless.club;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
+    <TargetName>Baimless.xyz</TargetName>
+    <OutDir>.\DLL</OutDir>
+    <IntDir>.\output</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;ANTARIO_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MapExports>true</MapExports>
+      <AssemblyDebug>true</AssemblyDebug>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;ANTARIO_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <StringPooling>
+      </StringPooling>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <EnableParallelCodeGeneration>
+      </EnableParallelCodeGeneration>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <PerUserRedirection>false</PerUserRedirection>
+      <MapExports>true</MapExports>
+      <AssemblyDebug>true</AssemblyDebug>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Baimless.club\AutoAccept.cpp" />
+    <ClCompile Include="Baimless.club\buffer.c" />
+    <ClCompile Include="Baimless.club\CFixMove.cpp" />
+    <ClCompile Include="Baimless.club\Config.cpp" />
+    <ClCompile Include="Baimless.club\Controls.cpp" />
+    <ClCompile Include="Baimless.club\Definitions.cpp" />
+    <ClCompile Include="Baimless.club\Entities.cpp" />
+    <ClCompile Include="Baimless.club\Features\Aimbot\Aimbot.cpp" />
+    <ClCompile Include="Baimless.club\Features\Aimbot\Autowall.cpp" />
+    <ClCompile Include="Baimless.club\Features\Aimbot\LagComp.cpp" />
+    <ClCompile Include="Baimless.club\Features\AntiAim\AntiAim.cpp" />
+    <ClCompile Include="Baimless.club\Features\bulletbeams\bullettracers.cpp" />
+    <ClCompile Include="Baimless.club\Features\Legit\Legitbot.cpp" />
+    <ClCompile Include="Baimless.club\Features\Misc\Misc.cpp" />
+    <ClCompile Include="Baimless.club\Features\otheresp\otheresp.cpp" />
+    <ClCompile Include="Baimless.club\Features\rankchanger\Protobuffs.cpp" />
+    <ClCompile Include="Baimless.club\Features\Resolver\Resolver.cpp" />
+    <ClCompile Include="Baimless.club\GrenadeHelperAPI.cpp" />
+    <ClCompile Include="Baimless.club\grenadetracer.cpp" />
+    <ClCompile Include="Baimless.club\GUI.cpp" />
+    <ClCompile Include="Baimless.club\hde32.c" />
+    <ClCompile Include="Baimless.club\hook.c" />
+    <ClCompile Include="Baimless.club\hookknife.cpp" />
+    <ClCompile Include="Baimless.club\Hooks.cpp" />
+    <ClCompile Include="Baimless.club\DLLMain.cpp" />
+    <ClCompile Include="Baimless.club\http.cpp" />
+    <ClCompile Include="Baimless.club\imgui\imgui.cpp" />
+    <ClCompile Include="Baimless.club\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Baimless.club\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Baimless.club\imgui\impl\imgui_impl_dx9.cpp" />
+    <ClCompile Include="Baimless.club\imgui\impl\imgui_impl_win32.cpp" />
+    <ClCompile Include="Baimless.club\Input.cpp" />
+    <ClCompile Include="Baimless.club\kit_parser.cpp" />
+    <ClCompile Include="Baimless.club\Lucida.hpp" />
+    <ClCompile Include="Baimless.club\md5_hash.cpp" />
+    <ClCompile Include="Baimless.club\Menu.cpp" />
+    <ClCompile Include="Baimless.club\newMenu.cpp" />
+    <ClCompile Include="Baimless.club\Newskinchanger.cpp" />
+    <ClCompile Include="Baimless.club\Nightmode.cpp" />
+    <ClCompile Include="Baimless.club\notifies.cpp" />
+    <ClCompile Include="Baimless.club\OBS ESP.cpp" />
+    <ClCompile Include="Baimless.club\Options.cpp" />
+    <ClCompile Include="Baimless.club\Radar.cpp" />
+    <ClCompile Include="Baimless.club\Render.cpp" />
+    <ClCompile Include="Baimless.club\Render2.cpp" />
+    <ClCompile Include="Baimless.club\SDK\CEntity.cpp" />
+    <ClCompile Include="Baimless.club\skinchanger.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Aimbot.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_AntiAim.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Gloves.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Knifes.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Legitbot.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Login.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Main.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Misc.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Players.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Ragebot.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Skins.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Skin_Changer.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Visuals.cpp" />
+    <ClCompile Include="Baimless.club\Tabs\tab_Weapons.cpp" />
+    <ClCompile Include="Baimless.club\watermark.cpp" />
+    <ClCompile Include="Baimless.club\tinyxml2.cpp" />
+    <ClCompile Include="Baimless.club\trampoline.c" />
+    <ClCompile Include="Baimless.club\ui.cpp" />
+    <ClCompile Include="Baimless.club\Utils\GlobalVars.cpp" />
+    <ClCompile Include="Baimless.club\Utils\Interfaces.cpp" />
+    <ClCompile Include="Baimless.club\Utils\Math.cpp" />
+    <ClCompile Include="Baimless.club\Utils\NetvarManager.cpp" />
+    <ClCompile Include="Baimless.club\Features\Visuals\ESP.cpp" />
+    <ClCompile Include="Baimless.club\vector3d.cpp" />
+    <ClCompile Include="Baimless.club\vfunct\vfuncthook.cpp" />
+    <ClCompile Include="Baimless.club\Window.cpp" />
+    <ClCompile Include="Drop.cpp" />
+    <ClCompile Include="Drops+.cpp" />
+    <ClCompile Include="logs.cpp" />
+    <ClCompile Include="md5.cpp" />
+    <ClCompile Include="Visuals.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Baimless.club\Arial.hpp" />
+    <ClInclude Include="Baimless.club\AutoAccept.h" />
+    <ClInclude Include="Baimless.club\B2 Icon.h" />
+    <ClInclude Include="Baimless.club\BAR Icon.h" />
+    <ClInclude Include="Baimless.club\buffer.h" />
+    <ClInclude Include="Baimless.club\CFixMove.h" />
+    <ClInclude Include="Baimless.club\CommonIncludes.h" />
+    <ClInclude Include="Baimless.club\Config.h" />
+    <ClInclude Include="Baimless.club\Controls.h" />
+    <ClInclude Include="Baimless.club\Definitions.h" />
+    <ClInclude Include="Baimless.club\detourhooks.h" />
+    <ClInclude Include="Baimless.club\EnginePrediction.h" />
+    <ClInclude Include="Baimless.club\Entities.h" />
+    <ClInclude Include="Baimless.club\Features\Aimbot\Aimbot.h" />
+    <ClInclude Include="Baimless.club\Features\Aimbot\Autowall.h" />
+    <ClInclude Include="Baimless.club\Features\Aimbot\EnginePrediction.h" />
+    <ClInclude Include="Baimless.club\Features\Aimbot\LagComp.h" />
+    <ClInclude Include="Baimless.club\Features\AntiAim\AntiAim.h" />
+    <ClInclude Include="Baimless.club\Features\bulletbeams\BeamInfo.hpp" />
+    <ClInclude Include="Baimless.club\Features\bulletbeams\bullettracers.h" />
+    <ClInclude Include="Baimless.club\Features\Features.h" />
+    <ClInclude Include="Baimless.club\Features\Legit\Legitbot.h" />
+    <ClInclude Include="Baimless.club\Features\Misc\Misc.h" />
+    <ClInclude Include="Baimless.club\Features\rankchanger\IMemAlloc.h" />
+    <ClInclude Include="Baimless.club\Features\rankchanger\ProtobuffMessages.h" />
+    <ClInclude Include="Baimless.club\Features\rankchanger\Protobuffs.h" />
+    <ClInclude Include="Baimless.club\Features\rankchanger\Protobuffs\inventory_changer.h" />
+    <ClInclude Include="Baimless.club\Features\rankchanger\Protobuffs\profile_info_changer.h" />
+    <ClInclude Include="Baimless.club\Features\rankchanger\Protobuffs\ProtobuffMessages.h" />
+    <ClInclude Include="Baimless.club\Features\rankchanger\Protobuffs\ProtoField.h" />
+    <ClInclude Include="Baimless.club\Features\rankchanger\Protobuffs\ProtoWriter.h" />
+    <ClInclude Include="Baimless.club\Features\rankchanger\rankchanger.h" />
+    <ClInclude Include="Baimless.club\Features\rankchanger\steam.h" />
+    <ClInclude Include="Baimless.club\Features\Resolver\Resolver.h" />
+    <ClInclude Include="Baimless.club\Features\singleston.h" />
+    <ClInclude Include="Baimless.club\Features\otheresp\otheresp.h" />
+    <ClInclude Include="Baimless.club\fnv.h" />
+    <ClInclude Include="Baimless.club\fnv_hash.hpp" />
+    <ClInclude Include="Baimless.club\Font.hpp" />
+    <ClInclude Include="Baimless.club\Fonts.h" />
+    <ClInclude Include="Baimless.club\fonts\cousine.hpp" />
+    <ClInclude Include="Baimless.club\fonts\droid.hpp" />
+    <ClInclude Include="Baimless.club\fonts\fonts.hpp" />
+    <ClInclude Include="Baimless.club\glow.h" />
+    <ClInclude Include="Baimless.club\GrenadeHelperAPI.h" />
+    <ClInclude Include="Baimless.club\grenadetracer.h" />
+    <ClInclude Include="Baimless.club\GUI.h" />
+    <ClInclude Include="Baimless.club\hde32.h" />
+    <ClInclude Include="Baimless.club\hitscan.h" />
+    <ClInclude Include="Baimless.club\hookknife.h" />
+    <ClInclude Include="Baimless.club\Hooks.h" />
+    <ClInclude Include="Antario\Menu.h" />
+    <ClInclude Include="Baimless.club\http.h" />
+    <ClInclude Include="Baimless.club\http\HTTPRequest.hpp" />
+    <ClInclude Include="Baimless.club\imgui\imconfig.h" />
+    <ClInclude Include="Baimless.club\imgui\imgui.h" />
+    <ClInclude Include="Baimless.club\imgui\imgui_internal.h" />
+    <ClInclude Include="Baimless.club\imgui\impl\imgui_impl_dx9.h" />
+    <ClInclude Include="Baimless.club\imgui\impl\imgui_impl_win32.h" />
+    <ClInclude Include="Baimless.club\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Baimless.club\imgui\imstb_textedit.h" />
+    <ClInclude Include="Baimless.club\imgui\imstb_truetype.h" />
+    <ClInclude Include="Baimless.club\Input.h" />
+    <ClInclude Include="Baimless.club\json.h" />
+    <ClInclude Include="Baimless.club\kit_parser.h" />
+    <ClInclude Include="Baimless.club\md5_hash.h" />
+    <ClInclude Include="Baimless.club\Menu.h" />
+    <ClInclude Include="Baimless.club\MinHook.h" />
+    <ClInclude Include="Baimless.club\Movement.h" />
+    <ClInclude Include="Baimless.club\NetworkStringTable.h" />
+    <ClInclude Include="Baimless.club\newMenu.h" />
+    <ClInclude Include="Baimless.club\Newskinchanger.h" />
+    <ClInclude Include="Baimless.club\Nightmode.h" />
+    <ClInclude Include="Baimless.club\nlohmann\json.hpp" />
+    <ClInclude Include="Baimless.club\notifies.h" />
+    <ClInclude Include="Baimless.club\OBS ESP.h" />
+    <ClInclude Include="Baimless.club\Options.hpp" />
+    <ClInclude Include="Baimless.club\Playerlist.h" />
+    <ClInclude Include="Baimless.club\Proxies.h" />
+    <ClInclude Include="Baimless.club\pstdint.h" />
+    <ClInclude Include="Baimless.club\Radar.h" />
+    <ClInclude Include="Baimless.club\rapidjson\allocators.h" />
+    <ClInclude Include="Baimless.club\rapidjson\document.h" />
+    <ClInclude Include="Baimless.club\rapidjson\encodedstream.h" />
+    <ClInclude Include="Baimless.club\rapidjson\encodings.h" />
+    <ClInclude Include="Baimless.club\rapidjson\error\en.h" />
+    <ClInclude Include="Baimless.club\rapidjson\error\error.h" />
+    <ClInclude Include="Baimless.club\rapidjson\filereadstream.h" />
+    <ClInclude Include="Baimless.club\rapidjson\filewritestream.h" />
+    <ClInclude Include="Baimless.club\rapidjson\fwd.h" />
+    <ClInclude Include="Baimless.club\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="Baimless.club\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="Baimless.club\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="Baimless.club\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="Baimless.club\rapidjson\internal\itoa.h" />
+    <ClInclude Include="Baimless.club\rapidjson\internal\meta.h" />
+    <ClInclude Include="Baimless.club\rapidjson\internal\pow10.h" />
+    <ClInclude Include="Baimless.club\rapidjson\internal\regex.h" />
+    <ClInclude Include="Baimless.club\rapidjson\internal\stack.h" />
+    <ClInclude Include="Baimless.club\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="Baimless.club\rapidjson\internal\strtod.h" />
+    <ClInclude Include="Baimless.club\rapidjson\internal\swap.h" />
+    <ClInclude Include="Baimless.club\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="Baimless.club\rapidjson\memorybuffer.h" />
+    <ClInclude Include="Baimless.club\rapidjson\memorystream.h" />
+    <ClInclude Include="Baimless.club\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="Baimless.club\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="Baimless.club\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="Baimless.club\rapidjson\pointer.h" />
+    <ClInclude Include="Baimless.club\rapidjson\prettywriter.h" />
+    <ClInclude Include="Baimless.club\rapidjson\rapidjson.h" />
+    <ClInclude Include="Baimless.club\rapidjson\reader.h" />
+    <ClInclude Include="Baimless.club\rapidjson\schema.h" />
+    <ClInclude Include="Baimless.club\rapidjson\stream.h" />
+    <ClInclude Include="Baimless.club\rapidjson\stringbuffer.h" />
+    <ClInclude Include="Baimless.club\rapidjson\writer.h" />
+    <ClInclude Include="Baimless.club\Render.h" />
+    <ClInclude Include="Baimless.club\Render2.h" />
+    <ClInclude Include="Baimless.club\SDK\AppSystem.h" />
+    <ClInclude Include="Baimless.club\SDK\bspflags.h" />
+    <ClInclude Include="Baimless.club\SDK\CGlobalVarsBase.h" />
+    <ClInclude Include="Baimless.club\SDK\CHandle.h" />
+    <ClInclude Include="Baimless.club\SDK\CEntity.h" />
+    <ClInclude Include="Baimless.club\SDK\CInput.h" />
+    <ClInclude Include="Baimless.club\SDK\ClientClass.h" />
+    <ClInclude Include="Baimless.club\SDK\CModelRender.h" />
+    <ClInclude Include="Baimless.club\SDK\Hitboxes.h" />
+    <ClInclude Include="Baimless.club\SDK\IAppSystem.h" />
+    <ClInclude Include="Baimless.club\SDK\ICvar.h" />
+    <ClInclude Include="Baimless.club\SDK\IEngineSound.h" />
+    <ClInclude Include="Baimless.club\SDK\IEngineTrace.h" />
+    <ClInclude Include="Baimless.club\SDK\ILocalize.h" />
+    <ClInclude Include="Baimless.club\SDK\IMaterial.h" />
+    <ClInclude Include="Baimless.club\SDK\IMDLCache.h" />
+    <ClInclude Include="Baimless.club\SDK\InputSystem.h" />
+    <ClInclude Include="Baimless.club\SDK\ISurface.h" />
+    <ClInclude Include="Baimless.club\SDK\ISurfaceData.h" />
+    <ClInclude Include="Baimless.club\SDK\IViewRender.h" />
+    <ClInclude Include="Baimless.club\SDK\IVModelInfo.h" />
+    <ClInclude Include="Baimless.club\SDK\IVModelInfoClient.h" />
+    <ClInclude Include="Baimless.club\SDK\IVRenderBeam.h" />
+    <ClInclude Include="Baimless.club\SDK\IVRenderView.h" />
+    <ClInclude Include="Baimless.club\SDK\UtlVector.h" />
+    <ClInclude Include="Baimless.club\Singleton.h" />
+    <ClInclude Include="Baimless.club\skinchanger.h" />
+    <ClInclude Include="Baimless.club\table32.h" />
+    <ClInclude Include="Baimless.club\watermark.h" />
+    <ClInclude Include="Baimless.club\tinyxml2.h" />
+    <ClInclude Include="Baimless.club\trampoline.h" />
+    <ClInclude Include="Baimless.club\ui.h" />
+    <ClInclude Include="Baimless.club\uselesshitbytes.h" />
+    <ClInclude Include="Baimless.club\Utils\Color.h" />
+    <ClInclude Include="Baimless.club\SDK\CPrediction.h" />
+    <ClInclude Include="Baimless.club\SDK\Definitions.h" />
+    <ClInclude Include="Baimless.club\SDK\IBaseClientDll.h" />
+    <ClInclude Include="Baimless.club\SDK\IClientEntity.h" />
+    <ClInclude Include="Baimless.club\SDK\IClientEntityList.h" />
+    <ClInclude Include="Baimless.club\SDK\IClientMode.h" />
+    <ClInclude Include="Baimless.club\SDK\IClientNetworkable.h" />
+    <ClInclude Include="Baimless.club\SDK\IClientRenderable.h" />
+    <ClInclude Include="Baimless.club\SDK\IClientThinkable.h" />
+    <ClInclude Include="Baimless.club\SDK\IClientUnknown.h" />
+    <ClInclude Include="Baimless.club\SDK\IGameEvent.h" />
+    <ClInclude Include="Baimless.club\SDK\IVEngineClient.h" />
+    <ClInclude Include="Baimless.club\SDK\KeyValues.h" />
+    <ClInclude Include="Baimless.club\SDK\PlayerInfo.h" />
+    <ClInclude Include="Baimless.club\Utils\GlobalVars.h" />
+    <ClInclude Include="Baimless.club\Utils\Interfaces.h" />
+    <ClInclude Include="Baimless.club\SDK\Recv.h" />
+    <ClInclude Include="Baimless.club\SDK\Vector.h" />
+    <ClInclude Include="Baimless.club\SDK\VMatrix.h" />
+    <ClInclude Include="Baimless.club\Utils\Math.h" />
+    <ClInclude Include="Baimless.club\Utils\NetvarManager.h" />
+    <ClInclude Include="Baimless.club\Utils\SPoint.h" />
+    <ClInclude Include="Baimless.club\Utils\SRect.h" />
+    <ClInclude Include="Baimless.club\Utils\Utils.h" />
+    <ClInclude Include="Baimless.club\Features\Visuals\ESP.h" />
+    <ClInclude Include="Baimless.club\Utils\XorStr.h" />
+    <ClInclude Include="Baimless.club\vector2d.h" />
+    <ClInclude Include="Baimless.club\vector3d.h" />
+    <ClInclude Include="Baimless.club\vfunct\vfuncthook.h" />
+    <ClInclude Include="Baimless.club\Weapons.hpp" />
+    <ClInclude Include="Baimless.club\XorStr.hpp" />
+    <ClInclude Include="cthash.h" />
+    <ClInclude Include="Drop.h" />
+    <ClInclude Include="Drops+.h" />
+    <ClInclude Include="logs.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="random.h" />
+    <ClInclude Include="sounds.h" />
+    <ClInclude Include="string_obfuscation.h" />
+    <ClInclude Include="Visuals.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="DLL\Fonts\Arial.ttf" />
+    <Font Include="DLL\Fonts\astriumwep.ttf" />
+    <Font Include="DLL\Fonts\Verdana.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DLL\Baimless.club.dll" />
+    <None Include="DLL\Baimless.club.map" />
+    <None Include="DLL\Baimless.club.pdb" />
+    <None Include="DLL\Injector.exe" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
